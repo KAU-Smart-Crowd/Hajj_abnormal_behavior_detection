@@ -1,5 +1,5 @@
 # Generative Adversarial Network Based Abnormal Behavior Detection in Massive Crowd Videos: A Hajj Case Study
-This repo is the official open source of Generative Adversarial Network Based Abnormal Behavior Detection in Massive Crowd Videos: A Hajj Case Study.
+This repository is the official open source of Generative Adversarial Network Based Abnormal Behavior Detection in Massive Crowd Videos: A Hajj Case Study.
 
 ![scalars_tensorboard](assets/architecture.JPG)
 
@@ -30,18 +30,8 @@ CUDA 8.0
 Cudnn 6.0
 Ubuntu 14.04 or 16.04, Centos 7 and other distributions.
 ```
-## 2. Download datasets
-cd into Data folder of project and run the shell scripts (**ped1.sh, ped2.sh, avenue.sh, shanghaitech.sh**) under the Data folder.
-Please manually download all datasets from [ped1.tar.gz, ped2.tar.gz, avenue.tar.gz and shanghaitech.tar.gz](https://onedrive.live.com/?authkey=%21AMqh2fTSemfrokE&id=3705E349C336415F%215109&cid=3705E349C336415F)
-and tar each tar.gz file, and move them in to **Data** folder.
 
-You can also download data from BaiduYun [https://pan.baidu.com/s/1j0TEt-2Dw3kcfdX-LCF0YQ](https://pan.baidu.com/s/1j0TEt-2Dw3kcfdX-LCF0YQ) i9b3 
-
-Our Hajj Dataset are agvalable at [https://1drv.ms/u/s!AiZbSIgZyw2tjA4wNdJC2NMqYRKg?e=XknW4D](https://1drv.ms/u/s!AiZbSIgZyw2tjA4wNdJC2NMqYRKg?e=XknW4D)
-
-You can also download data from BaiduYun [https://pan.baidu.com/s/1ZpbJF8RwwCh-LnO_GHOjUA](https://pan.baidu.com/s/1ZpbJF8RwwCh-LnO_GHOjUA)  39j3 
-
-## 3. Testing on saved models
+## 2. Testing on saved models
 * Download the trained models (There are the pretrained FlowNet and the trained models of the papers, such as ped1, ped2 and avenue).
 Please manually download pretrained models from [pretrains.tar.gz, avenue, ped1, ped2, flownet](https://onedrive.live.com/?authkey=%21AMqh2fTSemfrokE&id=3705E349C336415F%215109&cid=3705E349C336415F)
 and tar -xvf pretrains.tar.gz, and move pretrains into **Codes/checkpoints** folder. **[ShanghaiTech pre-trained models](https://onedrive.live.com/?authkey=%21AMlRwbaoQ0sAgqU&id=303FB25922AAD438%217383&cid=303FB25922AAD438)**
@@ -61,14 +51,14 @@ python inference.py  --dataset  avenue    \
                     --snapshot_dir    checkpoints/pretrains/avenue
 ```
 
-## 4. get optical flow images
+## 3. get optical flow images
 
 ```python
 python flow.py
 ```
 ![optical_flow](assets/opticalflow.JPG)
 
-## 5. Training from scratch (here we use ped2 and avenue datasets for examples)
+## 4. Training from scratch (here we use ped2 and avenue datasets for examples)
 * Download the pretrained FlowNet at first and see above mentioned step 3.1 
 * Set hyper-parameters
 The default hyper-parameters, such as $\lambda_{init}$, $\lambda_{gd}$, $\lambda_{op}$, $\lambda_{adv}$ and the learning rate of G, as well as D, are all initialized in **training_hyper_params/hyper_params.ini**. 
